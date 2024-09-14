@@ -1,0 +1,52 @@
+{
+    "cities": [
+      {
+        "id": 1,
+        "name": "Tokyo",
+        "description": "The bustling capital city of Japan, famous for its modern architecture, shopping, and cultural landmarks."
+      },
+      {
+        "id": 2,
+        "name": "Kyoto",
+        "description": "Known for its classical Buddhist temples, as well as gardens, imperial palaces, and traditional wooden houses."
+      }
+    ],
+    "touristAttractions": [
+      {
+        "id": 1,
+        "name": "Tokyo Tower",
+        "description": "A communications and observation tower in the Shiba-koen district of Minato, Tokyo.",
+        "cityId": 1
+      },
+      {
+        "id": 2,
+        "name": "Fushimi Inari-taisha",
+        "description": "The head shrine of the kami Inari, located in Fushimi-ku, Kyoto, famous for its thousands of torii gates.",
+        "cityId": 2
+      },
+      {
+        "id": 3,
+        "name": "Tokyo Disneyland",
+        "description": "A theme park based on films produced by Walt Disney, located in Urayasu, Chiba, near Tokyo.",
+        "cityId": 1
+      },
+      {
+        "id": 4,
+        "name": "Kinkaku-ji",
+        "description": "A Zen Buddhist temple in Kyoto, the top two floors of which are completely covered in gold leaf.",
+        "cityId": 2
+      }
+    ],
+    "userTouristAttractions": [
+      {
+        "id": 1,
+        "userId": 1,
+        "touristAttractionId": 1
+      },
+      {
+        "id": 2,
+        "userId": 2,
+        "touristAttractionId": 3
+      }
+    ]
+  }
