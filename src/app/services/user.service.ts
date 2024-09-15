@@ -19,11 +19,11 @@ export class UserService {
     return this.httpClient.post<ApiResponse<User>>(this.url, user);
   }
 
-  updateEmployee(id:string, user:User): Observable<ApiResponse<User>>{
+  updateEmployee(id:number, user:User): Observable<ApiResponse<User>>{
     return this.httpClient.put<ApiResponse<User>>(`${this.url}/${id}`, user);
   }
 
-  deleteEmployee(id?:string): Observable<any>{
+  deleteEmployee(id?:number): Observable<any>{
     return this.httpClient.delete(`${this.url}/${id}`);
   }
 }
