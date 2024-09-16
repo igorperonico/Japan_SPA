@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiResponse, User } from '../models/users';
+import { ApiResponse, User, UserForm } from '../models/users';
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +15,15 @@ export class UserService {
     return this.httpClient.get<ApiResponse<User>>(`${this.url}/${id}`);
   }
 
-  createUser(user:User): Observable<ApiResponse<User>>{
-    return this.httpClient.post<ApiResponse<User>>(this.url, user);
+  createUser(user: UserForm): Observable<any> {
+    return this.httpClient.post<any>(this.url, user);
   }
 
-  updateEmployee(id:number, user:User): Observable<ApiResponse<User>>{
+  updateEmployee(id: number, user: User): Observable<ApiResponse<User>> {
     return this.httpClient.put<ApiResponse<User>>(`${this.url}/${id}`, user);
   }
 
-  deleteEmployee(id?:number): Observable<any>{
+  deleteEmployee(id?: number): Observable<any> {
     return this.httpClient.delete(`${this.url}/${id}`);
   }
 }

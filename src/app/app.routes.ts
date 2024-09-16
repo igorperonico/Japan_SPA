@@ -22,7 +22,7 @@ export const routes: Routes = [
         canActivate: [authGuard],
 
         children: [
-            { path: '', component: HomeComponent },
+            { path: 'home', component: HomeComponent },
             { path: 'tourist-attractions', component: TouristAttractionsComponent },
             { path: 'dashboard', component: DashboardComponent }
         ],

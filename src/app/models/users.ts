@@ -12,3 +12,11 @@ export interface ApiResponse<T> {
     message?: string;
     data: T;
 }
+
+export interface UserForm {
+    "email": "string",
+    "name": "string",
+    "password": "string",
+    "role": "string",
+    "avatar": "string"
+}
