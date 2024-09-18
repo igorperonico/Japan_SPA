@@ -1,1 +1,55 @@
-<p>form-tourist-atrractions works!</p>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800/70">
+    <div class="bg-white p-8 rounded-lg w-full max-w-lg">
+        <h2 class="text-2xl font-bold mb-6">{{ data ? 'Edit Tourist Attraction' : 'Create Tourist Attraction' }}</h2>
+
+        <form [formGroup]="attractionForm" (ngSubmit)="onSubmit()" class="space-y-6">
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" formControlName="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
+                @if (attractionForm.get('name')?.hasError('required') && attractionForm.get('name')?.touched) {
+                <div class="form-error">Name is Required</div>
+                }
+            </div>
+
+            <div>
+                <label for="cityId" class="block text-sm font-medium text-gray-700">City</label>
+                <select id="cityId" formControlName="cityId"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
+                    <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                <textarea id="description" formControlName="description" rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"></textarea>
+                @if (attractionForm.get('description')?.hasError('required') &&
+                attractionForm.get('description')?.touched) {
+                <div class="form-error">Description is Required</div>
+                }
+            </div>
+
+            <div>
+                <label for="url" class="block text-sm font-medium text-gray-700">Image URL</label>
+                <input type="text" id="url" formControlName="url"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
+                @if (attractionForm.get('url')?.hasError('required') && attractionForm.get('url')?.touched) {
+                <div class="form-error">Description is Required</div>
+                }
+            </div>
+
+            <div class="flex justify-end space-x-4">
+                <button type="button" (click)="onClose()"
+                    class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-400 focus:outline-none">
+                    Cancel
+                </button>
+                <button type="submit" 
+                    class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    {{ data ? 'Update' : 'Create' }}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

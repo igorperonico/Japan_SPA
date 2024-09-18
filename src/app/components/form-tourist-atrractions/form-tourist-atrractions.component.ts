@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { TouristAttraction } from '../../shared/models/touristAttractions';
 import { TouristAttractionService } from '../../services/tourist-attraction.service';
 import { ToastrService } from 'ngx-toastr';
+import { Cities } from '../../shared/models/cities';
+import { CityService } from '../../services/city.service';
 
 @Component({
   selector: 'app-form-tourist-atrractions',
@@ -14,18 +16,24 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './form-tourist-atrractions.component.scss'
 })
 export class FormTouristAtrractionsComponent implements OnChanges {
+  [x: string]: any;
   @Output() onCloseModel = new EventEmitter()
   @Input() data: TouristAttraction | null = null
 
   attractionForm: FormGroup
+  cities: Cities[] = []
 
-  constructor(private fb: FormBuilder, private taService: TouristAttractionService, private toastr: ToastrService) {
+  constructor(private fb: FormBuilder, private taService: TouristAttractionService,
+    private toastr: ToastrService, private cityService: CityService) {
     this.attractionForm = this.fb.group({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       description: new FormControl('', [Validators.required]),
       cityId: new FormControl('', [Validators.required]),
       url: new FormControl('', [Validators.required])
-    })
+    });
+
+    this.loadCities();
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -33,6 +41,12 @@ export class FormTouristAtrractionsComponent implements OnChanges {
       this.attractionForm.patchValue(this.data);
     }
 
+  }
+
+  loadCities(): void {
+    this.cityService.getAllCities().subscribe((data) => {
+      this.cities = data;
+    })
   }
 
   onClose() {
