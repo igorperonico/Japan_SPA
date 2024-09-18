@@ -16,19 +16,19 @@ export class TouristAttractionService {
     return this.httpClient.get<any>(this.url);
   }
 
-  getEmployeeById(id: number): Observable<ApiResponse<TouristAttraction>> {
+  getTouristAttractionsById(id: number): Observable<ApiResponse<TouristAttraction>> {
     return this.httpClient.get<ApiResponse<TouristAttraction>>(`${this.url}/${id}`);
   }
 
-  createEmployee(touristAttraction: TouristAttraction): Observable<ApiResponse<TouristAttraction>> {
+  createTouristAttractions(touristAttraction: TouristAttraction): Observable<ApiResponse<TouristAttraction>> {
     return this.httpClient.post<ApiResponse<TouristAttraction>>(this.url, touristAttraction);
   }
 
-  updateEmployee(id: number, touristAttraction: TouristAttraction): Observable<ApiResponse<TouristAttraction>> {
+  updateTouristAttractions(id: number, touristAttraction: TouristAttraction): Observable<ApiResponse<TouristAttraction>> {
     return this.httpClient.put<ApiResponse<TouristAttraction>>(`${this.url}/${id}`, touristAttraction);
   }
 
-  deleteEmployee(id?: number): Observable<any> {
+  deleteTouristAttractions(id?: number): Observable<any> {
     return this.httpClient.delete(`${this.url}/${id}`);
   }
 
