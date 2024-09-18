@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiResponse } from '../models/users';
-import { TouristAttraction } from '../models/touristAttractions';
+import { ApiResponse } from '../shared/models/users';
+import { TouristAttraction } from '../shared/models/touristAttractions';
 
 @Injectable({
   providedIn: 'root'

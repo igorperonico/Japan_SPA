@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Login } from '../../models/login';
+import { Login } from '../../shared/models/login';
 import { AuthService } from '../../services/auth.service';
 import { Router, RouterOutlet } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';

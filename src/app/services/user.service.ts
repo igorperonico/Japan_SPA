@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiResponse, User, UserForm } from '../models/users';
+import { ApiResponse, User, UserForm } from '../shared/models/users';
 
 @Injectable({
   providedIn: 'root'
