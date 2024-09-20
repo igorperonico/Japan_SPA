@@ -25,15 +25,14 @@ export class DashboardComponent {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-
     this.authService.getCurrentUser().subscribe({
       next: (res) => {
-        this.user.avatar = res.avatar;
-        this.user.email = res.email;
-        this.user.name = res.name;
-        this.user.role = res.role;
+        this.user.avatar= res.avatar;
+        this.user.email= res.email;
+        this.user.name= res.name;
+        this.user.role= res.role;
       }
-    });
+    })
   }
 
 }

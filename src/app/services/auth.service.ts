@@ -10,13 +10,13 @@ import { User } from '../shared/models/users';
 export class AuthService {
   url = 'https://api.escuelajs.co/api/v1/auth';
 
-  constructor(private httpCLient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   login(login: Login): Observable<Login> {
-    return this.httpCLient.post<Login>(`${this.url}/login`, login)
+    return this.httpClient.post<Login>(`${this.url}/login`, login)
   }
   getCurrentUser(): Observable<User> {
-    return this.httpCLient.get<User>(`${this.url}/profile`)
+    return this.httpClient.get<User>(`${this.url}/profile`)
   }
 
   logout(): void {
