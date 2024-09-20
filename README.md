@@ -1,27 +1,42 @@
-# JapanSpa
+<h1 align="center" >Japan SPA</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+<div align="center">
+  <img src="https://img.freepik.com/fotos-gratis/arte-digital-de-fundo-do-japao_23-2151546134.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1726704000&semt=ais_hybrid" alt="Japan Tourist Attractions" />
+</div>
+
+## Descrição
+A **Japan Tourist Attractions SPA** é uma aplicação web de página única (SPA) que oferece uma experiência imersiva e interativa para explorar as principais atrações turísticas do Japão. O projeto permite que os usuários visualizem detalhes as atrações turísticas do Japão, com imagens e descrições do local.
+
+## Funcionalidades
+
+- Listagem das principais atrações turísticas do Japão.
+- Detalhes sobre cada atração, incluindo descrição, imagem e cidade associada.
+- Navegação simples e intuitiva entre as atrações.
+- Dashboard personalizada para cada usuário.
+
+## Tecnologias Utilizadas
+
+- **Frontend**: Angular
+- **Backend**: API local com db.json
+- **Estilos**: TailwindCSS / Bootstrap
+- **Autenticação**: API de autenticação (`https://api.escuelajs.co/api/v1/auth`)
+- **Gerenciamento de Estado**: Serviços do Angular
+
+## Como Utilizar
+- **Faça Login ou Registre-se:**
+  Você pode criar sua própria conta ou utilizar uma conta já existente, como por exemplo:
+  - Email: john@mail.com
+  - Password: changeme
+
+## Contato
+  
+  Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
+    <p><strong>Nome:</strong> Seu Nome</p>
+    <p><strong>E-mail:</strong> <a href="mailto:igormtpr@gmail.com">igormtpr@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/igorperonico" target="_blank">Igor Perônico</a></p>
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
