@@ -31,7 +31,7 @@ A **Japan Tourist Attractions SPA** é uma aplicação web de página única (SP
 ## Contato
   
   Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
-    <p><strong>Nome:</strong> Seu Nome</p>
+    <p><strong>Nome:</strong> Igor Monteiro</p>
     <p><strong>E-mail:</strong> <a href="mailto:igormtpr@gmail.com">igormtpr@gmail.com</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/igorperonico" target="_blank">Igor Perônico</a></p>
 
