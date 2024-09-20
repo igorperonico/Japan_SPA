@@ -24,7 +24,7 @@ export const routes: Routes = [
         children: [
             { path: '', component: HomeComponent },
             { path: 'tourist-attractions', component: TouristAttractionsComponent },
-            { path: 'dashboard', component: DashboardComponent }
+            { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard] }
         ],
     },
     { path: '**', redirectTo: '', pathMatch: 'full' },

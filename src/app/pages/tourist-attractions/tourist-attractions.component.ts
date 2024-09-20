@@ -7,11 +7,12 @@ import { ToastrService } from 'ngx-toastr';
 import { Cities } from '../../shared/models/cities';
 import { CityService } from '../../services/city.service';
 import { CommonModule } from '@angular/common';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-tourist-attractions',
   standalone: true,
-  imports: [ModelComponent, FormTouristAtrractionsComponent, CommonModule],
+  imports: [ModelComponent, FormTouristAtrractionsComponent, CommonModule, NgxPaginationModule],
   templateUrl: './tourist-attractions.component.html',
   styleUrl: './tourist-attractions.component.scss'
 })
@@ -26,6 +27,10 @@ export class TouristAttractionsComponent implements OnInit {
 
   city!: Cities;
 
+  currentPage: number = 1;
+
+  itemsPerPage: number = 9;
+
   constructor(private taService: TouristAttractionService, private cityService: CityService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
@@ -36,11 +41,10 @@ export class TouristAttractionsComponent implements OnInit {
   getAllToursistAttraction() {
     this.taService.getTouristAttractions().subscribe({
       next: (response) => {
-        this.touristAttractions = response
+        this.touristAttractions = response;
       }
-    })
+    });
   }
-
 
   deleteToursistAttraction(id?: number) {
     this.taService.deleteTouristAttractions(id).subscribe({
