@@ -5,7 +5,7 @@
 </div>
 
 ## Descrição
-A **Japan Tourist Attractions SPA** é uma aplicação web de página única (SPA) que oferece uma experiência imersiva e interativa para explorar as principais atrações turísticas do Japão. O projeto permite que os usuários visualizem detalhes as atrações turísticas do Japão, com imagens e descrições do local.
+A **WelcomeJapan** é uma aplicação web de página única (SPA) que oferece uma experiência imersiva e interativa para explorar as principais atrações turísticas do Japão. O projeto permite que os usuários visualizem detalhes as atrações turísticas do Japão, com imagens e descrições do local.
 
 ## Funcionalidades
 
